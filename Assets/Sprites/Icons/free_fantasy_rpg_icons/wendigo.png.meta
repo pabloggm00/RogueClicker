@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wendigo_0: -3046872346388461913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowed-mountains_0: -3445531850941272090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

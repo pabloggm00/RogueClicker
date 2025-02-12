@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      horseshoer_0: -2020413985734994493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

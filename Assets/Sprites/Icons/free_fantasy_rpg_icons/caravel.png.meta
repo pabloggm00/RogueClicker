@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      caravel_0: -7598131007647731226
+      caravel_1: -704128304439847467
+      caravel_2: -5528314023431319340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

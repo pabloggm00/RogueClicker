@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hailstorm_0: 4355884932248417397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -73,6 +73,6 @@ public class BackgroundParticles : MonoBehaviour
         if (room <= 400) return new Color(0.7f, 0.13f, 0.13f);  // Rojo Intenso
         if (room <= 450) return new Color(0.55f, 0f, 0f);  // Rojo Oscuro
         if (room > 450) return new Color(0.3f, 0f, 0f);  // Rojo Sangre
-        return Color.black;  // Negro total
+        return Color.white;  
     }
 }
