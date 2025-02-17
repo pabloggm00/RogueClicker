@@ -80,9 +80,23 @@ public class RoomGenerator : MonoBehaviour
 
         selectedRoom.roomObject.SetActive(true); // Activa la sala elegida
 
+        switch (selectedRoom.type)
+        {
+            case RoomType.Enemy:
+                //restamos 3 fuerza
+                break;
+            case RoomType.Chest:
+                //restamos
+                break;
+            case RoomType.Event:
+                break;
+            default:
+                break;
+        }
+
         if (selectedRoom.roomObject.TryGetComponent<EnemyRoom>(out EnemyRoom enemyRoom))
         {
-            enemyRoom.CreateEnemy();
+            enemyRoom.CreateEnemy();    
         }
     }
 }

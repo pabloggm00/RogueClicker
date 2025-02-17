@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class GameplayController : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameplayController : MonoBehaviour
     [HideInInspector]
     public int currentRoom;
 
+    [Header("Costo de acciones")]
+    public int batallaCost;
+    public int cofreCost;
 
     // Variables globales para los efectos de bonus:
     // En este caso, la "moneda" es la vitalidad.
@@ -21,10 +25,15 @@ public class GameplayController : MonoBehaviour
     // Para este ejemplo, usaremos el método AumentarVitalidad del playerController.
 
     // Variables para otros bonus globales (coste de combate, aparición de cofres, recuperación de vitalidad, etc.)
+    [HideInInspector]
     public float combatCostReductionFactor = 0f;  // Porcentaje de reducción del coste de combate (0 = sin reducción)
+    [HideInInspector]
     public int combatCostReductionDuration = 0;   // Número de salas que dura la reducción de coste
+    [HideInInspector]
     public float chestChance = 0.1f;              // Probabilidad base de aparición de cofre (ej. 10%)
+    [HideInInspector]
     public float vitalidadRecoveryChance = 0f;    // Probabilidad de recuperar vitalidad al derrotar enemigos
+    [HideInInspector]
     public int vitalidadRecoveryAmount = 0;       // Cantidad de vitalidad a recuperar cuando se activa la recuperación
 
 
@@ -60,6 +69,72 @@ public class GameplayController : MonoBehaviour
         }
 
     }
+
+    public void CostNextRoom(RoomType roomType)
+    {
+
+        int cantidad = 0;
+
+        switch (roomType)
+        {
+            case RoomType.Enemy:
+                cantidad = batallaCost;
+                break;
+            case RoomType.Chest:
+                cantidad = cofreCost;
+                break;
+            case RoomType.Event:
+                break;
+            default:
+                break;
+        }
+
+        playerController.DisminuirVitalidad(cantidad);
+    }
+
+    #region UpdateTextsInfoPlayer
+
+    public int GetDamage()
+    {
+        return playerController.dmgClick;
+    }
+
+    public int GetAutoclickDamage()
+    {
+        return playerController.dmgAutoclick;
+    }
+
+    public float GetIntervalAutoclick()
+    {
+        return playerController.intervalAutoclick;
+    }
+
+    public float GetCriticalProb()
+    {
+        return playerController.criticalProb;
+    }
+
+    public float GetCriticalDamage()
+    {
+        return playerController.criticalDmg;
+    }
+
+    public float GetChestChance()
+    {
+        return chestChance;
+    }
+
+    public float GetStrongthRecoveryChance()
+    {
+        return vitalidadRecoveryChance;
+    }
+
+    public float GetStrongthRecoveryAmount()
+    {
+        return vitalidadRecoveryAmount;
+    }
+
+    #endregion
 
     public void ActivarAutoClick()
     {
